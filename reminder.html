@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders - Pill Guard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="settings-btn">Set</button>
+            <h1>Reminders</h1>
+        </header>
+
+        <div class="welcome-banner">
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h2>Welcome Back, Pallavi!</h2>
+                    <p class="current-time"><i class="fas fa-calendar-alt"></i> Tuesday, 22 April <i class="fas fa-clock ml-2"></i> 8:58 PM</p>
+                </div>
+                <div class="welcome-quote">
+                    <p>"Stay healthy with your daily medication routine"</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="reminder-main">
+
+            <div class="reminder-grid">
+                <div class="reminder-card today-meds">
+                    <h3><i class="fas fa-clock"></i> Today's Medications</h3>
+                    <div class="med-schedule">
+                        <div class="schedule-item">
+                            <span class="time">Morning (8:00 AM)</span>
+                            <ul>
+                                <li>Metformin - 500mg</li>
+                                <li>Vitamin D3 - 1 tablet</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">Afternoon (2:00 PM)</span>
+                            <ul>
+                                <li>Calcium - 1 tablet</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time">Night (9:00 PM)</span>
+                            <ul>
+                                <li>Metformin - 500mg</li>
+                                <li>Multivitamin - 1 tablet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reminder-card low-stock">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Low Stock Alert</h3>
+                    <ul class="alert-list">
+                        <li>
+                            <span class="med-name">Metformin</span>
+                            <span class="stock-count">5 tablets left</span>
+                        </li>
+                        <li>
+                            <span class="med-name">Vitamin D3</span>
+                            <span class="stock-count">3 tablets left</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="reminder-card expiring">
+                    <h3><i class="fas fa-calendar-times"></i> Upcoming Expiries</h3>
+                    <ul class="alert-list">
+                        <li>
+                            <span class="med-name">Calcium</span>
+                            <span class="expiry-date">Expires in 15 days</span>
+                        </li>
+                        <li>
+                            <span class="med-name">Multivitamin</span>
+                            <span class="expiry-date">Expires in 30 days</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn" onclick="window.location.href='index.html'">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-btn" onclick="window.location.href='medicine.html'">
+                <i class="fas fa-pills"></i>
+                <span>Medicine</span>
+            </button>
+            <button class="nav-btn">
+                <i class="fas fa-qrcode"></i>
+                <span>Scanner</span>
+            </button>
+            <button class="nav-btn active">
+                <i class="fas fa-bell"></i>
+                <span>Reminder</span>
+            </button>
+            <button class="nav-btn" onclick="window.location.href='profile.html'">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

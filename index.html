@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pill Guard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- OneSignal SDK -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "YOUR-ONESIGNAL-APP-ID", // You'll need to replace this with your OneSignal App ID
+                notifyButton: {
+                    enable: true,
+                },
+                allowLocalhostAsSecureOrigin: true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="notification-container" id="notificationContainer"></div>
+    
+    <div class="container">
+        <header>
+            <button class="settings-btn">Set</button>
+            <h1>Pill Guard</h1>
+        </header>
+
+        <main>
+            <div class="main-content">
+                <h1 class="main-title">Hi,Good Morning</h1>
+                <p class="main-subtitle">Your Personal Medicine Assistant</p>
+                
+                <div class="alerts-container">
+                    <div class="alert-section" id="expiringMedicines">
+                        <h2><i class="fas fa-exclamation-triangle"></i> Expiring Soon</h2>
+                        <div class="alert-content"></div>
+                    </div>
+                    
+                    <div class="alert-section" id="lowStockMedicines">
+                        <h2><i class="fas fa-exclamation-circle"></i> Low Stock</h2>
+                        <div class="alert-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-btn" onclick="window.location.href='medicine.html'">
+                <i class="fas fa-pills"></i>
+                <span>Medicine</span>
+            </button>
+            <button class="nav-btn">
+                <i class="fas fa-qrcode"></i>
+                <span>Scanner</span>
+            </button>
+            <button class="nav-btn" onclick="window.location.href='reminder.html'">
+                <i class="fas fa-bell"></i>
+                <span>Reminder</span>
+            </button>
+            <button class="nav-btn" onclick="window.location.href='profile.html'">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
